@@ -34,7 +34,7 @@ var model = {
 	numShips: 3,
 	shipLength: 3,
 	shipsSunk: 0,
-
+//currently values are hardcoded for testing, to be changed into dynamic code later
 	ships: [
 		{
 			locations: ["06", "16", "26"],
