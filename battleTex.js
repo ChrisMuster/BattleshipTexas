@@ -7,12 +7,14 @@ var view = {
 
 	displayHit: function(location) {
 		var cell = document.getElementById(location);
-		cell.setAttribute("class", "border hit");
+		cell.setAttribute("class", "border hit hitColor");
+		cell.innerHTML = "<p>HIT</p>";
 	},
 
 	displayMiss: function(location) {
 		var cell = document.getElementById(location);
 		cell.setAttribute("class", "border miss");
+		cell.innerHTML = "<p>MISS</p>";
 	}
 };
 
@@ -48,10 +50,12 @@ var model = {
 			locations: ["10", "11", "12"],
 		 	hits: ["", "", ""]
 		}
-	]
+	],
 
 	fire: function(guess) {
-		
+		for (var i = 0; i < this.numShips; i++) {
+			var ship = this.ships[i];
+		}
 	}
 };
 
