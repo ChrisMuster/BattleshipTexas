@@ -45,6 +45,7 @@ td {
 	color: #00fffa;
 	text-align: center;
 	font-size: 32px;
+	text-shadow: 2px 2px black;
 	background-color: rgb(255,255,255, 0.3);
 }
 
