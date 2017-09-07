@@ -1,0 +1,91 @@
+body {
+	background: url("radar.jpg") no-repeat;
+	background-color: black;
+	font-family: Helvetica, sans-serif;
+}
+
+#board {
+	position: relative;
+	width: 100%;
+	height: 860px;
+	margin: auto;
+	/*background-color: #fff;
+	opacity: 0.2;*/
+}
+
+#messageArea {
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	color: #fcff63;
+	font-size: 28px;
+	font-weight: bold;
+	background-color: #666;
+	padding: 5px;
+	border: 1px solid #fcff63;
+	border-radius: 5px;
+	z-index: 1;
+}
+
+.border {
+	border: 1px solid white;
+}
+
+/*rgba(255,255,255, 0)*/
+table {
+	position: absolute;
+	left: 226px;
+	top: 29px;
+	border-spacing: 0px;
+
+}
+
+td {
+	width: 94px;
+	height: 94px;
+	color: #00fffa;
+	text-align: center;
+	font-size: 32px;
+	background-color: rgb(255,255,255, 0.3);
+}
+
+form {
+	position: absolute;
+	bottom: 415px;
+	right:  0px;
+	padding: 12px;
+	/*background-color: #666;*/
+	background-color: #478e15;
+	border: 1px solid #fcff63;
+	border-radius: 5px;
+}
+
+form input {
+	background-color: #666;
+	border: 1px solid white;
+	padding: 3px;
+	height: 25px;
+	color: #fcff63;
+	font-size: 13px;
+}
+
+.hit {
+	background: rgb(0,0,0,0.5) url("ship.png") no-repeat center center;
+}
+
+.miss {
+	background: rgb(0,0,0,0.5) url("miss.png") no-repeat center center;
+}
+
+.input1 {
+	width: 150px;
+}
+
+.input2 {
+	width: 50px;
+}
+
+.smallText {
+	font-size: 14px;
+	color: #00fffa;
+}

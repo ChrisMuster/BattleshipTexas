@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Battleship Texas!</title>
+	<link rel="stylesheet" type="text/css" href="texstyle.css">
+</head>
+<body>
+	<div id="board">
+		<div id="messageArea">Battleships!</div>
+		<table class="border">
+			<tr>
+				<td id="AA" class="border">A</td><td id="00" class="border"></td><td id="01" class="border"></td><td id="02" class="border"></td><td id="03" class="border"></td><td id="04" class="border"></td><td id="05" class="border"></td><td id="06" class="border"></td>
+			</tr>
+			<tr>
+				<td id="BB" class="border">B</td><td id="10" class="border"></td><td id="11" class="border"></td><td id="12" class="border"></td><td id="13" class="border"></td><td id="14" class="border"></td><td id="15" class="border"></td><td id="16" class="border"></td>
+			</tr>
+			<tr>
+				<td id="CC" class="border">C</td><td id="20" class="border"></td><td id="21" class="border"></td><td id="22" class="border"></td><td id="23" class="border"></td><td id="24" class="border"></td><td id="25" class="border"></td><td id="26" class="border"></td>
+			</tr>
+			<tr>
+				<td id="DD" class="border">D</td><td id="30" class="border"></td><td id="31" class="border"></td><td id="32" class="border"></td><td id="33" class="border"></td><td id="34" class="border"></td><td id="35" class="border"></td><td id="36" class="border"></td>
+			</tr>
+			<tr>
+				<td id="EE" class="border">E</td><td id="40" class="border"></td><td id="41" class="border"></td><td id="42" class="border"></td><td id="43" class="border"></td><td id="44" class="border"></td><td id="45" class="border"></td><td id="46" class="border"></td>
+			</tr>
+			<tr>
+				<td id="FF" class="border">F</td><td id="50" class="border"></td><td id="51" class="border"></td><td id="52" class="border"></td><td id="53" class="border"></td><td id="54" class="border"></td><td id="55" class="border"></td><td id="56" class="border"></td>
+			</tr>
+			<tr>
+				<td id="GG" class="border">G</td><td id="60" class="border"></td><td id="61" class="border"></td><td id="62" class="border"></td><td id="63" class="border"></td><td id="64" class="border"></td><td id="65" class="border"></td><td id="66" class="border"></td>
+			</tr>
+			<tr>
+				<td class="border smallText">3 hits to sink each ship! Sink 3 ships to win!</td><td class="border">0</td><td class="border">1</td><td class="border">2</td><td class="border">3</td><td class="border">4</td><td class="border">5</td><td class="border">6</td>
+			</tr>
+
+		</table>
+		<form>
+			<input type="text" id="guessInput" name="guessInput" placeholder="A0..." class="input1">
+			<input type="button" id="fireButton" name="fireButton" value="Fire!" class="input2">
+		</form>		
+	</div>
+
+	<script src="battleTex.js"></script>
+</body>
+</html>
