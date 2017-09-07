@@ -89,3 +89,39 @@ model.fire("26");
 */
 
 //The CONTROLLER
+var controller = {
+	guesses: 0,
+
+	processGuess: function(guess) {
+		var location = parseGuess(guess);
+		if (location) {
+			this.guesses++;
+			var hit = model.fire(location);
+			if (hit && model.shipsSunk === model.numShips) {
+				view.displayMessage("You sank all 3 battleships, in " + this.guesses + " guesses");
+			}
+		}
+	}
+};
+
+//Code to validate that guess is in the correct format
+function parseGuess(guess) {
+	var alphabet = ["A", "B", "C", "D", "E", "F", "G"];
+
+	if (guess === null || guess.length !== 2) {
+		alert("Oops, please only enter a letter and a number on the board.");
+	} else {
+		var firstChar = guess.charAt(0);
+		var row = alphabet.indexOf(firstChar);
+		var column = guess.charAt(1);
+
+		if (isNan(row) || isNan(column)) {
+			alert("Oops, that entry isn't on the board.");
+		} else if (row < 0 || row>= model.boardSize || column < 0 || column >= model.boardSize) {
+			alert("Oops, that entry is way off the board!");
+		} else {
+			return row + column;
+		}
+	}
+	return null;
+}
