@@ -38,8 +38,14 @@
 		</table>
 		<form>
 			<input type="text" id="guessInput" name="guessInput" placeholder="A0..." class="input1">
-			<input type="button" id="fireButton" name="fireButton" value="Fire!" class="input2">
-		</form>		
+			<input type="button" id="fireButton" name="fireButton" value="FIRE!" class="input2">
+		</form>
+
+		<div id="gameOver" class="hideGameOver">
+			<h1>GAME OVER</h1>
+			<input type="button" id="reload" name="reload" value="New Game" onClick="document.location.reload(true)">
+		</div>
+
 	</div>
 
 	<script src="battleTex.js"></script>
