@@ -47,7 +47,6 @@ var model = {
 				ship.hits[index] = "hit";
 				view.displayHit(guess);
 				view.displayMessage("HIT!!");
-				oldGuess.push(guess);
 				if (this.isSunk(ship)) {
 					view.displayMessage("You have 3 hits and sank my battleship!");
 					this.shipsSunk++;
@@ -57,7 +56,6 @@ var model = {
 		}
 		view.displayMiss(guess);
 		view.displayMessage("You missed.");
-		oldGuess.push(guess);
 		return false;
 	},
 
@@ -122,23 +120,21 @@ var model = {
 	}
 };
 
-//The CONTROLLER   /////////////////////////////////////////////////////////////
-var oldGuess = [];
-
+//The CONTROLLER   ////////////////////////////////////////////////////////////
 var controller = {
-	guesses: 0,
+	guesses: [],  //keeps track of all the guesses made so far
 	//passes the guess to validation, then to the model to see if it is a hit or miss
 	processGuess: function(guess) {
 		var location = parseGuess(guess);
-		if (oldGuess.indexOf(location) > -1) {
+		if (controller.guesses.indexOf(location) > -1) {
 			alert("Location already guessed. Try again.");
 			return false;
 		}
 		if (location) {
-			this.guesses++;
+			controller.guesses.push(location);
 			var hit = model.fire(location);
 			if (hit && model.shipsSunk === model.numShips) {
-				view.displayMessage("You sank all 3 battleships, in " + this.guesses + " guesses!");
+				view.displayMessage("You sank all 3 battleships, in " + controller.guesses.length + " guesses!");
 				document.getElementById("gameOver").removeAttribute("class");
 			}
 		}
