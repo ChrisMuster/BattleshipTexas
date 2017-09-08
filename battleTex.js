@@ -47,7 +47,7 @@ var model = {
 				ship.hits[index] = "hit";
 				view.displayHit(guess);
 				view.displayMessage("HIT!!");
-				oldHit.push(guess);
+				oldGuess.push(guess);
 				if (this.isSunk(ship)) {
 					view.displayMessage("You have 3 hits and sank my battleship!");
 					this.shipsSunk++;
@@ -57,6 +57,7 @@ var model = {
 		}
 		view.displayMiss(guess);
 		view.displayMessage("You missed.");
+		oldGuess.push(guess);
 		return false;
 	},
 
@@ -122,14 +123,14 @@ var model = {
 };
 
 //The CONTROLLER   /////////////////////////////////////////////////////////////
-var oldHit = [];
+var oldGuess = [];
 
 var controller = {
 	guesses: 0,
 	//passes the guess to validation, then to the model to see if it is a hit or miss
 	processGuess: function(guess) {
 		var location = parseGuess(guess);
-		if (oldHit.indexOf(location) > -1) {
+		if (oldGuess.indexOf(location) > -1) {
 			alert("Location already guessed. Try again.");
 			return false;
 		}
