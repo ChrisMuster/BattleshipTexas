@@ -15,15 +15,16 @@ body {
 	position: absolute;
 	top: 29px;
 	left: 5px;
-	color: #fcff63;
+	color: #7dfb0b;
+	text-shadow: 2px 2px black;
 	text-align: center;
 	font-size: 24px;
 	font-weight: bold;
 	background-color: #666;
 	padding: 5px;
-	border: 2px solid #fcff63;
+	border: 2px solid #7dfb0b;
 	border-radius: 5px;
-	max-width: 200px;
+	width: 200px;
 	z-index: 1;
 }
 
@@ -55,17 +56,18 @@ form {
 	right:  0px;
 	padding: 12px;
 	background-color: #478e15;
-	border: 1px solid #fcff63;
+	border: 1px solid #7dfb0b;
 	border-radius: 5px;
 }
 
 form input {
-	background-color: #666;
+	background-color: #333;
 	border: 2px solid white;
 	padding: 3px;
 	height: 25px;
 	color: #fcff63;
 	font-size: 13px;
+	text-transform:uppercase;
 }
 
 p {
@@ -125,3 +127,33 @@ p {
 	background-color: white;
 	border: 2px solid red;
 }
+
+#gameOver {
+	position: relative;
+	text-align: center;
+	color: #7dfb0b;
+	text-shadow: 2px 2px black;
+	left: 0;
+	top: 40%;
+	z-index: 2;
+	background-color: rgba(0,0,0,0.7);
+	border: 2px solid #7dfb0b;
+	border-radius: 5px;
+}
+
+#gameOver input {
+	height: 40px;
+	width: 90px;
+	background-color: #666;
+	color: rgba(125, 251, 11);
+	text-shadow: 1px 1px black;
+	font-size: 14px;
+	border: 2px solid rgba(125, 251, 11);
+	border-radius: 5px;
+	margin: 0 0 20px 0;
+}
+
+.hideGameOver {
+	display: none;
+}
+
