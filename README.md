@@ -1,2 +1,2 @@
 # BattleshipTexas
-Battleship game written in JavaScript, HTML and CSS
+My old version of the Battleship game written in JavaScript, HTML and CSS
